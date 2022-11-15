@@ -42,16 +42,29 @@ class Person {
     this.age++
   }
 }
-
+class Warrior extends Person {
+    // name: string;
+    // age: number;
+    weapon:String
+    constructor(name: string, age: number, weapon: string) {
+        super(name, age)
+        this.weapon = weapon
+    }
+    fight() {
+        console.log(`Taste my ${this.weapon}!`)
+    }
+}
 //These are INSTANCES
 let person = new Person("Nicolas", 34);
-let person2 = new Person("Elona", 26)
-
-person.greet();
-person.checkStatus()
-person.workout()
-person.checkStatus()
-person.sleep()
-person.checkStatus()
-person.eat()
-person.checkStatus()
+let warrior = new Warrior("Elona", 26, "Sord")
+// let person2 = new Person("Elona", 26)
+warrior.fight()
+warrior.greet()
+// person.greet();
+// person.checkStatus()
+// person.workout()
+// person.checkStatus()
+// person.sleep()
+// person.checkStatus()
+// person.eat()
+// person.checkStatus()
